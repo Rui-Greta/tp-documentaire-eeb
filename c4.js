@@ -134,8 +134,8 @@ window.TPDOC = {
           explain: "La section réelle commande le calibre : 16 A, et 8 socles au maximum." },
         { type: "order", q: "Remplacer un tableau : remets les 8 étapes dans l'ordre.", items: ["Préparer", "Consigner", "Photographier", "Identifier", "Déposer", "Poser", "Raccorder", "Repérer"] },
         { type: "qcm", q: "Pourquoi photographier et repérer les départs avant de déposer l'ancien tableau ?", options: ["Pour le client", "Pour reconnecter chaque circuit au bon endroit avec sa phase et son neutre", "Pour l'assurance", "Pour le diagnostiqueur"], answer: 1 },
-        { type: "num", img: "eeb_c4_unifilaire.png", alt: "Schéma unifilaire du nouveau tableau : AGCP, ID1 type AC, ID2 type A, 4 départs", q: "Sur ce tableau, combien de circuits peut-on encore ajouter sous ID2 ?", answer: 6, tol: 0, unit: "circuits",
-          explain: "8 circuits au maximum par ID ; ID2 en protège déjà 2 (S1, S4)." },
+        { type: "num", img: "eeb_c4_unifilaire.png", alt: "Schéma unifilaire du tableau de Mme Lopez après mise en sécurité : AGCP, ID1 et ID3 type AC, ID2 type A, 8 départs", q: "Tableau de Mme Lopez après mise en sécurité : combien de circuits peut-on encore ajouter sous ID2 ?", answer: 6, tol: 0, unit: "circuits",
+          explain: "8 circuits au maximum par ID ; ID2 en protège déjà 2 (S1 plaque de cuisson, S2 lave-linge)." },
         { type: "qcm", img: "eeb_c4_departs.png", alt: "Mini-tableau en multifilaire : ID 30 mA, éclairage et prises", q: "Sur ce schéma, le neutre du circuit des prises est raccordé…", options: ["sur le bornier de terre", "sur le disjoncteur Q2, sous le même ID que sa phase", "sur le disjoncteur Q1", "directement sur l'arrivée, avant l'ID"], answer: 1 },
         { type: "tf", q: "Conducteurs anciens : vrai ou faux ?", items: [
           ["Un conducteur aluminium peut être serré au contact direct d'un cuivre.", false],
