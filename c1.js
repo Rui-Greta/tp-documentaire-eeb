@@ -116,7 +116,7 @@ window.TPDOC = {
         { type: "match", q: "Chute de tension maximale admise :", pairs: [
           ["Circuit d'éclairage", "3 % (6,9 V)"],
           ["Autres usages", "5 % (11,5 V)"]] },
-        { type: "gen", gen: "du", n: 3, q: "Calcule la chute de tension ΔU = 2 × ρ × L × Ib / S (ρ = 0,0225), en % de 230 V, arrondie au dixième." },
+        { type: "gen", gen: "du", n: 3, q: "Calcule la chute de tension ΔU = 2 × ρ × L × Ib / S (ρ = 0,0172), en % de 230 V, arrondie au dixième." },
         { type: "qcm", q: "Un circuit est long et sa chute de tension dépasse la limite. Que fais-tu ?", options: ["Je prends un disjoncteur plus gros", "J'augmente la section du câble", "Je passe en H07V-K", "Je ne change rien, c'est toléré"], answer: 1 }
       ]
     },
@@ -216,8 +216,8 @@ window.TPDOC = {
           explain: "Ib = 3 000 / 230 = 13,0 A." },
         { type: "qcm", q: "Pour ce circuit de 3 000 W, quel disjoncteur et quelle section ?", options: ["10 A – 1,5 mm²", "16 A – 1,5 mm²", "20 A – 2,5 mm²", "32 A – 6 mm²"], answer: 1,
           explain: "Chauffage jusqu'à 3 500 W : 1,5 mm² / 16 A. Ib 13 A ≤ In 16 A ≤ Iz." },
-        { type: "num", q: "Prise de la terrasse : circuit 2,5 mm², Ib = 16 A, 30 m. Chute de tension en % ?", answer: 3.8, tol: 0.15, unit: "%",
-          explain: "ΔU = 2 × 0,0225 × 30 × 16 / 2,5 = 8,64 V → 3,8 % ≤ 5 % : conforme." },
+        { type: "num", q: "Prise de la terrasse : circuit 2,5 mm², Ib = 16 A, 30 m. Chute de tension en % ?", answer: 2.9, tol: 0.15, unit: "%",
+          explain: "ΔU = 2 × 0,0172 × 30 × 16 / 2,5 = 6,60 V → 2,9 % ≤ 5 % : conforme." },
         { type: "qcm", q: "Parafoudre pour ce logement (AQ1, souterrain, sans paratonnerre) ?", options: ["Obligatoire", "Non obligatoire", "Interdit", "Obligatoire en TT"], answer: 1 },
         { type: "open", q: "Tu constates que le plan architectural met 9 points lumineux sur le circuit L1, protégé par un seul disjoncteur 10 A sur l'unifilaire. Rédige en 3 à 4 phrases ta note au chef de chantier.", hint: "Le constat, la règle (8 points maximum), ta proposition, et le fait que tu attends sa décision avant de câbler." }
       ]
