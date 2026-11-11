@@ -76,9 +76,9 @@
         var kind = k % 2, L = 12 + Math.floor(r() * 27), S2, I2, lim, lab;
         if (kind === 0) { S2 = 2.5; I2 = 16; lim = 5; lab = "Circuit de prises 2,5 mm², Ib = 16 A"; }
         else { S2 = 1.5; I2 = [4, 5, 6][Math.floor(r() * 3)]; lim = 3; lab = "Circuit d'éclairage 1,5 mm², Ib = " + I2 + " A"; }
-        var du = 2 * 0.0225 * L * I2 / S2, pc = Math.round(1000 * du / 230) / 10;
+        var du = 2 * 0.0172 * L * I2 / S2, pc = Math.round(1000 * du / 230) / 10;
         out.push({ q: lab + ", longueur " + L + " m. Chute de tension ΔU en % ?", answer: pc, tol: 0.15, unit: "%",
-          explain: "ΔU = 2 × 0,0225 × " + L + " × " + I2 + " / " + fr(S2) + " = " + fr(Math.round(du * 100) / 100) + " V → " + fr(pc) + " % " + (pc <= lim ? "≤ " : "> ") + lim + " % : " + (pc <= lim ? "conforme" : "non conforme") });
+          explain: "ΔU = 2 × 0,0172 × " + L + " × " + I2 + " / " + fr(S2) + " = " + fr(Math.round(du * 100) / 100) + " V → " + fr(pc) + " % " + (pc <= lim ? "≤ " : "> ") + lim + " % : " + (pc <= lim ? "conforme" : "non conforme") });
       } else if (ex.gen === "idnb") {
         var bk = (k + Math.floor(r() * 3)) % 3, surf = bk === 0 ? 24 + Math.floor(r() * 11) : bk === 1 ? 40 + Math.floor(r() * 55) : 105 + Math.floor(r() * 50), nb = bk + 2;
         out.push({ q: "Logement de " + surf + " m² : nombre minimal d'interrupteurs différentiels 30 mA ?", answer: nb, tol: 0, unit: "ID",
