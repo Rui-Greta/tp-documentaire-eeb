@@ -465,6 +465,8 @@
       navigator.share ? h("button", { type: "button", onclick: function () { navigator.share({ title: "Bilan TP documentaire", text: bilanText() }).catch(function () {}); } }, ["Partager"]) : null,
       info]);
     main.appendChild(acts);
+    main.appendChild(h("div", { class: "actions wrapbtn" }, [
+      h("a", { href: (window.TPCONFIG && window.TPCONFIG.homeUrl) || "./", class: "btn primary" }, ["← Retour à tous les TP documentaires"])]));
     main.appendChild(h("details", { class: "reset" }, [h("summary", null, ["Recommencer le TP (formateur)"]),
       h("p", { class: "hint" }, ["Efface toutes les réponses enregistrées sur cet appareil. Code formateur obligatoire."]),
       h("div", { class: "actions wrapbtn" }, [
